@@ -1,3 +1,4 @@
+
 const express = require('express'),
       server  = express(),
       port    = 3000;
@@ -22,8 +23,16 @@ server.get('/', (req:any, res:any) => res.send(testablePage));
 
 const page = `Example app listening at http://localhost:${port}`;
 
+let instance:any = null;
+
 function start() {
-  server.listen(port, () => console.log(page));  
+   if (!!(instance)) { throw new TypeError('instance already MADE...'); } 
+   instance = server.listen(port, () => console.log(page));  
 }
 
-export { start };
+function stop() {
+   instance.close();
+   instance = null;
+}
+
+export { start, stop };
