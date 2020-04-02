@@ -1,5 +1,6 @@
 import { multiply } from './index';
 import { stop } from './webserver';
+
 const playwright = require('playwright');
 
 test( 'multiply tester', async () => {
@@ -9,7 +10,7 @@ test( 'multiply tester', async () => {
 test( 'mf test', async() => {
    
    
-   let browserType = "chromium";
+   let browserType = process.env.MFBROWSER;
    console.log( browserType, "START" );
    const browser = await playwright[browserType].launch();
    console.log( browserType, "LAUNCHED" );
