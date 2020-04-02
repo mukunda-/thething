@@ -9,8 +9,7 @@ test( 'multiply tester', async () => {
 
 test( 'mf test', async() => {
    
-   
-   let browserType = process.env.MFBROWSER;
+   let browserType = process.env.MFBROWSER || "chromium";
    console.log( browserType, "START" );
    const browser = await playwright[browserType].launch();
    console.log( browserType, "LAUNCHED" );
@@ -33,4 +32,4 @@ test( 'mf test', async() => {
    
    // blame stonecyph smh...
    stop();
-});
+}, 20000);
