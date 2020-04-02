@@ -1,5 +1,5 @@
 import { multiply } from './index';
 
 test( 'multiply tester', async () => {
-   expect( index.multiply( 
+   expect( multiply( 3, 7 ) ).toEqual( 21 );
 });
