@@ -4,7 +4,8 @@
   "description": "the thing",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build": "tsc --build tsconfig.json"
   },
   "repository": {
     "type": "git",
