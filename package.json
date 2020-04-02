@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/mukunda-/thething/issues"
   },
-  "homepage": "https://github.com/mukunda-/thething#readme"
+  "homepage": "https://github.com/mukunda-/thething#readme",
+  "devDependencies": {
+    "jest": "^25.2.4"
+  }
 }
